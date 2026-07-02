@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinned SJ | Local Community Corkboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Pinned SJ</h1>
+        <button id="openModalBtn">+ Post Flyer</button>
+    </header>
+
+    <main>
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="food">Food</button>
+            <button class="filter-btn" data-category="event">Events</button>
+            <button class="filter-btn" data-category="service">Services</button>
+        </div>
+
+        <div id="corkboard" class="grid"></div>
+    </main>
+
+    <!-- Post Modal -->
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create a Flyer</h2>
+            <form id="postForm">
+                <input type="text" id="title" placeholder="Title" required>
+                <select id="category">
+                    <option value="food">Food</option>
+                    <option value="event">Event</option>
+                    <option value="service">Service</option>
+                </select>
+                <textarea id="desc" placeholder="Details..." required></textarea>
+                <input type="url" id="imgUrl" placeholder="Image URL (e.g. Unsplash/Imgur)" required>
+                <button type="submit">Pin to Board</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
